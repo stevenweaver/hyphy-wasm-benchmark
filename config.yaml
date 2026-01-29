@@ -50,5 +50,11 @@ cpu_configs:
 hyphy_bin: "${HYPHY_BIN:-hyphy}"
 hyphy_libpath: "${HYPHY_LIBPATH:-}"
 
+# Browsers for WASM benchmarks
+browsers:
+  - chromium
+  # - firefox  # Requires COOP/COEP headers
+  # - webkit   # Requires COOP/COEP headers
+
 # Output directory
 output_dir: "results"
