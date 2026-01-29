@@ -1,0 +1,54 @@
+# HyPhy Benchmark Configuration
+
+# Datasets to benchmark
+datasets:
+  bglobin:
+    sequences: 17
+    sites: 432
+    file: "data/bglobin.nex"
+  lysozyme:
+    sequences: 19
+    sites: 390
+    file: "data/lysozyme.nex"
+  adh:
+    sequences: 23
+    sites: 762
+    file: "data/adh.nex"
+  HIVvif:
+    sequences: 29
+    sites: 576
+    file: "data/HIVvif.nex"
+  HepatitisD:
+    sequences: 33
+    sites: 588
+    file: "data/HepatitisD.nex"
+  camelid:
+    sequences: 212
+    sites: 288
+    file: "data/camelid.nex"
+
+# Methods to benchmark
+methods:
+  - fel
+  - slac
+  - meme
+  - absrel
+  - busted
+  - relax
+
+# Benchmark settings
+iterations: 3
+
+# CPU configurations to test
+cpu_configs:
+  - 1      # Single-threaded
+  - 4      # 4 cores
+  - 8      # 8 cores
+  - 0      # All cores (0 means use all available)
+
+# HyPhy paths (override with environment variables)
+hyphy_bin: "${HYPHY_BIN:-hyphy}"
+hyphy_libpath: "${HYPHY_LIBPATH:-}"
+
+# Output directory
+output_dir: "results"

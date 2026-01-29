@@ -1,0 +1,33 @@
+# Snakemake SLURM Profile Configuration
+
+# Use SLURM executor
+executor: slurm
+
+# Default resources for all jobs
+default-resources:
+  slurm_partition: "standard"
+  mem_mb: 4000
+  runtime: 120  # minutes
+
+# Job submission settings
+jobs: 50  # Max concurrent jobs
+latency-wait: 60  # Seconds to wait for output files
+
+# Restart failed jobs
+restart-times: 1
+
+# Keep going if a job fails
+keep-going: true
+
+# Print shell commands
+printshellcmds: true
+
+# Use conda environments if specified
+use-conda: true
+
+# SLURM-specific settings
+set-threads: true
+set-resources: true
+
+# Log directory
+cluster-logs: "logs/slurm"

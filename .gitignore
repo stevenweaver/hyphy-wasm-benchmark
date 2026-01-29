@@ -1,0 +1,20 @@
+# Results
+results/
+
+# Snakemake
+.snakemake/
+logs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
